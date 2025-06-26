@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="filter.css" >
+    <title>watch filter</title>
+</head>
+<body>
+    <div class="container">
+        <div class="leftmenu">
+            <input type="text" placeholder="Search..." class="search"/>
+            <h1>Categoriess</h1>
+            <div class="cats">
+              
+            </div>
+            <h1>Maximum price</h1>
+            <div class="price">
+                <input type="range" class="priceRange">
+                <span class="priceValue"></span>
+            </div>
+        </div>
+        
+        <div class="content">
+ <div class="product">
+
+          </div>
+        </div>
+        <div class="login">
+            <h2>Login</h2>
+           
+            <br>
+             <form action="backend.php">
+                            <div style="display: flex;margin-top:15px;gap:50px">
+                                <div style>
+                                    First Name<div style="width:160px;border-bottom: 1px solid gray;">
+                                        <input style="border:none ;height:30px" type="text">
+                                    </div>
+                                </div>
+                                <div style>
+                                    last Name<div style="width:160px;border-bottom: 1px solid gray;">
+                                        <input style="border:none;height:30px" type="text">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div style="display: flex;margin-top:30px;gap:50px;">
+                                <div>
+                                    Email
+                                    <div style="width:160px;border-bottom: 1px solid gray;">
+                                        <input style="border:none;height:30px" type="text">
+                                    </div>
+                                </div>
+                                <div>
+                                    Phone Number<div style="width:160px;border-bottom: 1px solid gray;">
+                                        <input style="border:none ;height:30px" type="text">
+                                    </div>
+                                </div>
+                              
+                            </div>
+                             <div style="display: flex;margin-top:30px;gap:50px;">
+                                <div>
+                                    City Location
+                                    <div style="width:160px;border-bottom: 1px solid gray;">
+                                        <input style="border:none;height:30px" type="text">
+                                    </div>
+                                </div>
+                                <div>
+                                    Home Address<div style="width:160px;border-bottom: 1px solid gray;">
+                                        <input style="border:none ;height:30px" type="text">
+                                    </div>
+                                </div>
+                              
+                            </div>
+                            
+                            <button
+                                style="margin-top:20px; background-color:rgba(17, 121, 239, 1);padding:5px; border-radius:3px">login
+                            </button>
+                    </div>
+
+                    </form>
+
+        </div>
+    </div>
+    <script src="filter.js"></script>
+</body>
+</html>
