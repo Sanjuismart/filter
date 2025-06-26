@@ -1,0 +1,67 @@
+.container{
+    display: flex;
+    padding: 20px;
+    //background-color: #ff77; width: 100%;
+}
+
+.leftmenu{
+    flex: 4;
+}
+.content{
+    flex: 10;
+  
+}
+.Search{
+    padding:10px ;
+    width: 200px;
+    border:1px solid gray ;
+}
+h1{
+    font-size: 30px;
+    color: #555;
+    font-weight: 300 ;
+}
+.cats{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.cat{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 5px;
+
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+  
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.product{
+    /* width: 350px; */
+   display: grid;
+   flex-wrap: wrap;
+   grid-template-columns: 1fr 1fr 1fr;
+   
+}
+img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+
+.name{
+    font-weight: 300;
+}
+.imgs{
+    width: 10px;
+    height: 10px;
+}
