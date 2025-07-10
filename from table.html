@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Signup Form</title>
+  <style>
+    body { font-family: Arial; margin: 40px; background: #f2f2f2; }
+    form { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; width: 300px; }
+    input { display: block; margin-bottom: 10px; width: 100%; padding: 8px; }
+    button { padding: 8px 16px; }
+    .error { color: red; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+
+  <h2>Signup Form</h2>
+  <form id="signupForm">
+    <input type="email" id="signupEmail" placeholder="Email" required />
+    <input type="password" id="signupPassword" placeholder="Password (12 characters)" required />
+    <div id="signupError" class="error"></div>
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <h2>Login Form</h2>
+  <form id="loginForm">
+    <input type="email" id="loginEmail" placeholder="Email" required />
+    <input type="password" id="loginPassword" placeholder="Password" required />
+    <div id="loginError" class="error"></div>
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRegex = /^[a-zA-Z0-9]{12}$/;
+
+    document.getElementById('signupForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('signupEmail').value;
+      const password = document.getElementById('signupPassword').value;
+      const error = document.getElementById('signupError');
+      
+      if (!emailRegex.test(email)) {
+        error.textContent = "Invalid email address.";
+      } else if (!passwordRegex.test(password)) {
+        error.textContent = "Password must be 12 alphanumeric characters.";
+      } else {
+        error.textContent = "";
+        alert("Signup successful!");
+        
+      }
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+      const error = document.getElementById('loginError');
+
+      if (!emailRegex.test(email)) {
+        error.textContent = "Invalid email address.";
+      } else if (!passwordRegex.test(password)) {
+        error.textContent = "Invalid password format.";
+      } else {
+        error.textContent = "";
+        alert("Login successful!");
+             }
+    });
+  </script>
+
+</body>
+</html>
